@@ -1,0 +1,64 @@
+body {
+  @apply text-xl;
+}
+main {
+  @apply w-full md:w-[70%] m-auto;
+}
+.big-title {
+  @apply uppercase md:text-8xl text-4xl font-semibold text-white;
+}
+
+
+.title-section {
+  @apply text-orange-500 text-4xl font-semibold my-8 before:content-['|'] before:text-blue-400 before:px-2;
+}
+/* .flex-start {
+  @apply flex justify-start items-center;
+}
+.flex-end {
+  @apply flex md:flex-row flex-col justify-end items-center;
+}
+
+.flex-between {
+  @apply flex justify-between items-center;
+}
+.flex-center {
+  @apply flex items-center gap-3;
+}
+.flex-gap3 {
+  @apply flex items-center gap-3;
+}
+
+.flex-between-col {
+  @apply flex-col justify-between items-center;
+}
+
+body {
+  @apply bg-[#192630] md:p-6;
+}
+
+main {
+  @apply py-2 m-auto bg-white md:rounded-4xl md:w-[90%] md:overflow-hidden;
+}
+
+header {
+  @apply text-xl text-blue-900;
+}
+*/
+
+/* Hero */
+/* .hero-banner {
+  @apply relative h-[600px] flex items-center justify-center;
+}
+
+.hero-title {
+  @apply text-white font-bold;
+}
+
+.hero-subtitle {
+  @apply text-white;
+}
+
+.hero-button {
+  @apply bg-secondary text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-orange-600 transition-colors;
+} */

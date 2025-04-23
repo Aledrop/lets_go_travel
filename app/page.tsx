@@ -1,103 +1,62 @@
+"use client";
+
+import { Stack, Tab, Tabs } from "@mui/material";
+import Header from "./components/Header/Header";
+import { SyntheticEvent, useState } from "react";
+import Banner from "./components/Banner/Banner";
+import Testimonials from "./components/Testimonios/Testimonios";
+import Footer from "./components/Footer/Footer";
+import Poles from "./components/Poles/Poles";
+import Finder from "./components/Finder/Finder";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [value, setValue] = useState(0);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const handleChange = (event: SyntheticEvent, newValue: number) => {
+    setValue(newValue);
+  };
+  return (
+    <>
+      <Header />
+
+      <Stack direction="column" spacing={4} className="py-4 md:px-10 px-2 m-auto">
+        <div className="bg-[#062571] text-white p-4 rounded-[3rem]">
+          <Finder />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* BANNER */}
+        <Banner></Banner>
+
+        {/* POLES */}
+        <Poles></Poles>
+
+        {/* Disney */}
+        <section className="w-full">
+          <Image src="/images/disney1.png" alt="" width={1080} height={100} className="m-auto" />
+        </section>
+
+        {/* ABOUT */}
+        <section className="text-center p-4">
+          <h2 className="title-section">Quienes somos</h2>
+          <p className="md:text-2xl text-xl text-center text-blue-900">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ex. Excepturi
+            consequuntur unde perspiciatis cumque tenetur ea aspernatur quis fugit aut esse rerum
+            minima, repellendus nostrum non! Eaque animi unde cum, excepturi perferendis delectus
+            similique iste mollitia laboriosam placeat impedit laborum porro illum ut vitae quisquam
+            amet expedita a veniam vel dignissimos nisi iusto totam? Ullam minus ad, dolorum
+            excepturi asperiores sint quam laboriosam enim expedita suscipit quos ipsum aspernatur
+            corrupti eveniet? Nihil fugit accusantium repellat voluptatum repellendus sed quae quas
+            consequuntur asperiores provident, soluta voluptate assumenda laboriosam nam, voluptas
+            quaerat quia odit vel, enim veniam cumque. Consequatur, corporis rerum.
+          </p>
+        </section>
+
+        {/* TESTIMONIOS */}
+        <Testimonials></Testimonials>
+      </Stack>
+      {/* FOOTER */}
+      <Footer />
+    </>
   );
 }

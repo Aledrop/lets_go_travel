@@ -1,0 +1,10 @@
+.top-menu-bar {
+  @apply px-6 py-2 text-xl;
+}
+.separator {
+  vertical-align: super;
+  @apply after:content-['|'] after:mx-4 after:text-orange-500 last:after:content-none after:text-4xl;
+}
+.header-nav {
+  @apply md:overflow-hidden bg-orange-500 md:px-4 py-4 md:rounded-tl-[80px];
+}
